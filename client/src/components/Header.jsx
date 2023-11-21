@@ -6,7 +6,7 @@ export default function Header() {
     <header className="bg-slate-200 shadow-md">
         <div className="flex justify-between items-center max-w-6xl mx-auto p-3">
             <Link to='/'>
-          <h1>
+          <h1 className="font-bold  sm:text-xl">
             <span className="text-slate-500">GHSR</span>
             <span className="text-slate-700">Estate</span>
         </h1>
