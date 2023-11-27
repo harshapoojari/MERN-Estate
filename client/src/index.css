@@ -3,5 +3,6 @@
 @tailwind utilities;
 
 body{
+    zoom:0.9;
 background-color: rgb(240, 241, 246);
 }

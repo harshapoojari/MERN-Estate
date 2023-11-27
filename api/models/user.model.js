@@ -21,7 +21,7 @@ const userSchema=new mongoose.Schema({
     },
     avatar:{
         type:String,
-        default:""
+        default:"https://images.pexels.com/photos/2220336/pexels-photo-2220336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     }
 }
 ,{timestamps:true});
