@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv'
 import userRouter from './route/user.route.js'
 import authRouter from './route/auth.route.js'
-
+import cookieParser from 'cookie-parser';
 dotenv.config()
 mongoose.connect(process.env.MONGO_PASS).then(()=>{
     console.log("Connected to db");
@@ -12,7 +12,7 @@ mongoose.connect(process.env.MONGO_PASS).then(()=>{
 })
  const app=express();
 app.use(express.json())
-
+app.use(cookieParser())
   app.listen(3000,()=>{
 console.log("Server is successfully running on 3000");
   })
