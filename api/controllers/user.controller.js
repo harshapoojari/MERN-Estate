@@ -2,12 +2,11 @@ import { errorHandler } from "../utils/error.js"
 import bcryptjs from 'bcryptjs';
 import User from '../models/user.model.js'
 
-export const test=(req,res)=>{
-    res.json({message:"Hello World"})
-}
 
-export const updateUser= async (req,res)=>{
-    if(req.user.id!==req.params.id) return next(errorHandler(401,"You can only update yourr Account"))
+
+export const updateUser= async (req,res,next)=>{
+   
+    if(req.user.id!==req.params.id) return next(errorHandler(401,"You can only update your Account"))
     try {
         if(req.body.password)
         {
@@ -34,4 +33,5 @@ export const updateUser= async (req,res)=>{
         next(error)
         
     }
+   
 }
