@@ -4,7 +4,7 @@ import dotenv from 'dotenv'
 import userRouter from './route/user.route.js'
 import authRouter from './route/auth.route.js'
 import cookieParser from 'cookie-parser';
-
+import listingRouter from './route/listing.route.js'
 
 
 
@@ -29,6 +29,7 @@ console.log("Server is successfully running on 3000");
   })
  app.use('/api/user',userRouter)
  app.use('/api/auth',authRouter)
+ app.use('/api/listing',listingRouter)
 
  app.use((err,req,res,next)=>{
   const statusCode=err.statusCode || 500;
